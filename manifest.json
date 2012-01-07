@@ -1,0 +1,15 @@
+{
+    "name": "SeatSmarter",
+    "version": "0.0",
+    "description": "Arrange Seat Smarter",
+    "icons": { "128": "gold.png", "48": "gold.png", "16": "gold.png"},
+ 
+    "app": 
+    {
+        "launch": 
+        {
+            "local_path": "main.html"
+        }
+    },
+    "permissions": ["http://*/"]
+}
