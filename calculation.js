@@ -1,3 +1,14 @@
+Array.prototype.shuffle = function (){
+    var i = this.length, j, temp;
+    if ( i == 0 ) return;
+    while ( --i ) {
+        j = Math.floor( Math.random() * ( i + 1 ) );
+        temp = this[i];
+        this[i] = this[j];
+        this[j] = temp;
+    }
+};
+
 function sortByWeight(a, b){
     var x = a.weight;
     var y = b.weight;
@@ -57,6 +68,7 @@ function divideGroup(inputData, category, categoryMap, criteria) {
         personList.push(personObj);  
     }
 
+    personList.shuffle();  
     personList.sort(sortByWeight);
     
     var numOfGroups = Math.round(personList.length/tableSize);
